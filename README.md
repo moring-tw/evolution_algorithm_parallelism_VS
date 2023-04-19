@@ -1,5 +1,5 @@
 # evolution_algorithm_parallelism_VS
-PAEHN<br />
+## English
 compile envirment: Windows 10 64bit<br />
 IDE: Microsoft Visual Studio 2022<br />
 programming language: C++<br />
@@ -13,7 +13,7 @@ paehn4.txt is the variant which doesn't check whether the individuals in the pro
 
 paehn_st_upper_2.txt ~ paehn_st_upper_10.txt are the paehn which use different stagnation threshold upper limit, respectively.<br />
 
-<font size="3"><b>OUTPUT</b></font><br />
+## <font size="3"><b>OUTPUT</b></font><br />
 Every time executing the paehn will produce a folder named by DateTime in the directory.<br />
 To output the coordinates and fitness value of an individual in population, promising archive and subpopulation,<br />
 please modify the kOutput parameter in "source/differential_evolution/variants/paehn.cpp" to true.<br />
@@ -21,14 +21,14 @@ If kOutput parameter is setting to true, it will output the coordinates and fitn
 Otherwise the folder will still be created, but won't contain any data.<br />
 These data can be used for graphing and interpreting.<br />
 
-<font size="3"><b>Graphing</b></font><br />
+## <b>Graphing</b><br />
 IDE: Matlab R2023a<br />
 Please open the "\benchmark\inc\MMOP\matlab\plots.m" by MatLab for graphing.<br />
 Modify the dirname in plots.m for graphing the specified problem.<br />
 Notice: only can graph on 1~2D functions.<br />
 
 
-
+## 中文
 編譯環境: Windows 10 64bit<br />
 IDE: Microsoft Visual Studio 2022<br />
 撰寫語言: C++<br />
@@ -42,12 +42,13 @@ paehn4.txt 不檢查潛力解族群是否過於擁擠且不重啟這些解個體
 
 paehn_st_upper_2.txt ~ paehn_st_upper_10.txt 分別代表使用不同停滯閾值上限的paehn<br />
 
+## 輸出
 程式每次執行會根據執行時間在目錄中產生資料夾<br />
 如欲輸出 paehn 執行過程中的主要族群、潛力解族群、子族群的座標與適應值<br />
 請修改 source/differential_evolution/variants/paehn.cpp 中的 kOutput 參數為 true，若設定 false 資料夾仍會被創建，只是裡面不會有資料<br />
 設定為 true 後便會輸出主要族群、潛力解族群、子族群的座標與適應值，可供作圖或數據判讀之用。<br />
 
-
+## 作圖
 IDE: MatLab R2023a<br />
 作圖請使用 MatLab 開啟\benchmark\inc\MMOP\matlab\plots.m<br />
 針對想要作圖的題目修改 plots.m 中的 dirname<br />
