@@ -1,0 +1,564 @@
+% ******************************************************************************
+% * Version: 1.0
+% * Last modified on: 21 January, 2013 
+% * Developers: Michael G. Epitropakis, Xiaodong Li.
+% *      email: mge_(AT)_cs_(DOT)_stir_(DOT)_ac_(DOT)_uk 
+% *           : xiaodong_(DOT)_li_(AT)_rmit_(DOT)_edu_(DOT)_au 
+% * ****************************************************************************
+%%
+% F1: Five-Uneven-Peak Trap
+figure(1);
+x=[0:0.1:30];
+y=zeros(size(x));
+for i=1:length(x)
+	y(i) = niching_func(x(i),1);
+end
+plot(x,y,'b-');
+saveas(gcf,'figs/F1.eps','psc2')
+saveas(gcf,'figs/F1.png','png')
+
+%%
+% F2: Equal Maxima
+figure(2);
+x=[0:0.001:1];
+y=zeros(size(x));
+for i=1:length(x)
+	y(i) = niching_func(x(i),2);
+end
+plot(x,y,'b-');
+saveas(gcf,'figs/F2.eps','psc2')
+saveas(gcf,'figs/F2.png','png')
+
+%%
+% F3: Uneven Decreasing Maxima
+figure(3);
+x=[0:0.001:1];
+y=zeros(size(x));
+for i=1:length(x)
+	y(i) = niching_func(x(i),3);
+end
+plot(x,y,'b-');
+saveas(gcf,'figs/F3.eps','psc2')
+saveas(gcf,'figs/F3.png','png')
+%%
+% F4: Himmelblau
+figure(4);
+[X,Y] = meshgrid(-6:.05:6);
+Z=zeros(size(X));
+i=1;
+for x=-6:0.05:6
+	j=1;
+	for y=-6:0.05:6
+		Z(i,j) = niching_func([x y],4);
+		j=j+1;
+	end
+	i=i+1;
+end
+surfc(X,Y,Z, 'FaceColor','interp','FaceLighting','phong','EdgeColor','none');
+axis([-6 6 -6 6 -2000 200])
+saveas(gcf,'figs/F4.eps','psc2')
+saveas(gcf,'figs/F4.png','png')
+%%
+% F5: Six-Hump Camel Back
+figure(5);
+[X,Y] = meshgrid(linspace(-1.9,1.9,200),linspace(-1.1,1.1,200));
+Z=zeros(size(X));
+i=1;
+for x=linspace(-1.9,1.9,200)
+	j=1;
+	for y=linspace(-1.1,1.1,200)
+		Z(i,j) = niching_func([x y],5);
+		j=j+1;
+	end
+	i=i+1;
+end
+surfc(X,Y,Z, 'FaceColor','interp','FaceLighting','phong','EdgeColor','none');
+axis([-1.9 1.9 -1.1 1.1 -6 2])
+saveas(gcf,'figs/F5.eps','psc2')
+saveas(gcf,'figs/F5.png','png')
+
+%%
+% F6: Shubert
+fig = figure('KeyPressFcn',@KeyPressCallBack);
+[X,Y] = meshgrid(-10:0.1:10);
+Z=zeros(size(X));
+i=1;
+for x=-10:0.1:10
+	j=1;
+	for y=-10:0.1:10
+		Z(i,j) = niching_func([x y],6);
+		j=j+1;
+	end
+	i=i+1;
+end
+surfc(X,Y,Z, 'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha',.3);
+hold on;
+view([-90 90])
+
+p_num = 34;
+run_num = 1;
+one_gen = 100;
+dirname = "dot\20230107T183254";h = zeros(1,1);
+Draw3DOptPoints(p_num, h)
+% F6: Shubert population
+%Draw3DPoints(p_num, run_num, one_gen, dirname, fig)
+% F6: Shubert draw subpop
+%Draw3DSubpop(p_num, run_num, dirname, fig, false)
+
+%%
+% F7: Vincent
+fig = figure('KeyPressFcn',@KeyPressCallBack);
+[X,Y] = meshgrid(0.25:0.05:10);
+Z=zeros(size(X));
+i=1;
+for x=0.25:0.05:10
+    j=1;
+    for y=0.25:0.05:10
+	    Z(i,j) = niching_func([x y],7);
+	    j=j+1;
+    end
+    i=i+1;
+end
+surfc(X,Y,Z, 'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha',.3);
+hold on;
+view([-90 90])
+p_num = 35;
+run_num = 1;
+one_gen = 100;
+dirname = "dot\20230107T183254";
+
+h = zeros(1,1);
+Draw3DOptPoints(p_num, h)
+% F7: Vincent population
+%Draw3DPoints(p_num, run_num, one_gen, dirname, fig)
+% F7: Vincent draw subpop
+%Draw3DSubpop(p_num, run_num, dirname, fig, true)
+
+%%
+% F7: Vincent
+% 20221202T135651
+% 20221202T130236
+% speciation 20221202T155105
+dirname = "20221226T034234";
+dot = importdata("dot\"+dirname+"\35R1.csv", ',', 0);
+archive_dot = importdata("dot\"+dirname+"\35R1Archive.csv", ',', 0);
+opt = importdata("data\F7_2D_opt.dat", ' ', 0);
+one_gen = 100;
+[X,Y] = meshgrid(0.25:0.05:10);
+Z=zeros(size(X));
+i=1;
+for x=0.25:0.05:10
+    j=1;
+    for y=0.25:0.05:10
+	    Z(i,j) = niching_func([x y],7);
+	    j=j+1;
+    end
+    i=i+1;
+end
+surfc(X,Y,Z, 'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha',.3);
+hold on;
+plot3(opt(:,1), opt(:, 2), zeros(length(opt), 1)+0.999, 'ko', 'MarkerFaceColor', 'blue');
+view([-90 -90])
+hold on;
+
+D1 = dot(:,1);
+D2 = dot(:,2);
+D3 = dot(:,3) * -1;
+%D3(D3<-10) = (-10);
+AD1 = archive_dot(:,1);
+AD2 = archive_dot(:,2);
+AD3 = archive_dot(:,3);
+AD3 = AD3 + 0.6;
+shading interp;
+hold on;
+%now_gen = plot3(D1, D2, D3, 'ko', 'MarkerFaceColor', 'green');
+hold on;
+%archive_now_gen = plot3(AD1, AD2, AD3*-1, 'ko', 'MarkerFaceColor', 'red');
+
+hold off;
+%%
+% F8: Modified Rastrigin - All Global Optima
+fig = figure('KeyPressFcn',@KeyPressCallBack);
+[X,Y] = meshgrid(0:0.01:1);
+Z=zeros(size(X));
+i=1;
+for x=0:0.01:1
+	j=1;
+	for y=0:0.01:1
+		Z(i,j) = niching_func([x y],10);
+		j=j+1;
+	end
+	i=i+1;
+end
+surfc(X,Y,Z, 'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha',.3);
+hold on;
+view([-90 90])
+p_num = 38;
+run_num = 1;
+one_gen = 100;
+dirname = "dot\20230107T183254";
+% F8: Modified Rastrigin population
+Draw3DPoints(p_num, run_num, one_gen, dirname, fig)
+% F8: Modified Rastrigin draw subpop
+Draw3DSubpop(p_num, run_num, dirname, fig, false)
+%%
+% F9: Composition function 1
+fig = figure('KeyPressFcn',@KeyPressCallBack);
+x=-5:0.1:5; y=x;
+global initial_flag
+initial_flag=0;
+func_num = 11;
+
+L = length(x);
+f = zeros(L);
+
+for i=1:L
+	for j=1:L
+		f(i,j) = niching_func([x(i),y(j)],func_num);
+	end
+end
+
+surfc(x,y,f,'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha',.3);
+grid off;
+hold on;
+view([-90 90])
+p_num = 39;
+run_num = 1;
+one_gen = 100;
+dirname = "dot\20230107T183254";
+%Draw3DOptPoints(p_num);
+%hold off;
+% F9: Composition function 1 population
+Draw3DPoints(p_num, run_num, one_gen, dirname, fig)
+% F9: Composition function 1 draw subpop
+Draw3DSubpop(p_num, run_num, dirname, fig, false)
+
+%%
+% F10: Composition function 2
+fig = figure('KeyPressFcn',@KeyPressCallBack);
+x=-5:0.1:5; y=x;
+global initial_flag
+initial_flag=0;
+func_num = 12;
+
+L = length(x);
+f = zeros(L);
+
+for i=1:L
+	for j=1:L
+		f(i,j) = niching_func([x(i),y(j)],func_num);
+	end
+end
+
+surfc(x,y,f,'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha',.3);
+grid off;
+hold on;
+view([-90 90])
+p_num = 40;
+run_num = 1;
+one_gen = 100;
+dirname = "dot\20230107T183254";
+
+% F10: Composition function 2 population
+Draw3DPoints(p_num, run_num, one_gen, dirname, fig)
+% F10: Composition function 2 draw subpop
+Draw3DSubpop(p_num, run_num, dirname, fig, true)
+%%
+% F11: Composition function 3
+fig = figure('KeyPressFcn',@KeyPressCallBack);
+x=-5:0.1:5; y=x;
+global initial_flag
+initial_flag=0;
+func_num = 13;
+
+L = length(x);
+f = zeros(L);
+
+for i=1:L
+	for j=1:L
+		f(i,j) = niching_func([x(i),y(j)],func_num);
+	end
+end
+
+surfc(x,y,f,'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha', 1.0);
+grid off;
+hold on;
+%view([-90 90])
+p_num = 41;
+run_num = 1;
+one_gen = 100;
+dirname = "dot\20230128T160113";
+
+h = zeros(1, 1);
+h = Draw3DOptPoints(p_num, h);
+hold off;
+exportgraphics(fig,'AnnotatedPlot.png', 'Resolution', '800')
+% F11: Composition function 3 population
+%Draw3DPoints(p_num, run_num, one_gen, dirname, fig)
+% F11: Composition function 3 subpop
+%Draw3DSubpop(p_num, run_num, dirname, fig, false)
+%%
+% F12: Composition function 4
+figure(12);
+x=-5:0.1:5; y=x;
+global initial_flag
+initial_flag=0;
+func_num = 15;
+
+L = length(x);
+f = zeros(L);
+
+for i=1:L
+	for j=1:L
+		f(i,j) = niching_func([x(i),y(j)],func_num);
+	end
+end
+
+surfc(x,y,f,'FaceColor','interp','FaceLighting','phong','EdgeColor','none','FaceAlpha', 1.0);
+grid off;
+hold on
+
+%Draw3DOptPoints(42)
+hold off
+
+%% function definition
+function WindowMaximized(fig)
+    fig.WindowState = 'maximized';
+end
+
+function KeyPressCallBack(src, event)
+    if(event.Key == "q")
+            disp("BACK");
+        set(src, "UserData", struct("dir","-"));
+    else 
+        if(event.Key == "w")
+            disp("MOVE");
+            set(src, "UserData", struct("dir","+"));
+        elseif event.Key == "s"
+            disp("Stop");
+            set(src, "UserData", struct("dir","s"));
+        elseif event.Key == "a"
+            set(src, "UserData", struct("dir","a"));
+        else
+            disp("HOLD");
+            set(src, "UserData", struct("dir","~"));
+        end
+    end
+end
+
+function direction = GetFigureDir(fig)
+    w = waitforbuttonpress;
+    if w == 1
+        if(isa(get(fig, "UserData"), "struct"))
+            direction = get(fig, "UserData").dir;
+        else
+            direction = "~";
+        end
+    else
+        direction = "~";
+    end
+end
+
+function F_num = GetRealFNum(p_num)
+    real_F_num_array = [1,2,3,4,5,6,7,6,7,8,9,10,11,11,12,11,12,11,12,12];
+    F_num = real_F_num_array(p_num - 28);
+end
+
+function [B, A] = swap_value(A, B)
+
+end
+%%
+function h = Draw3DOptPoints(p_num, h)
+    opt_value = [200.0, 1.0, 1.0, 200.0, 1.031628453, 186.7309088, 1.0, 2709.093505 1.0, -2.0, 0,0,0,0,0,0,0,0,0,0];
+    real_P_num = GetRealFNum(p_num);
+    if real_P_num < 9
+        opt = importdata("data\F"+real_P_num+"_2D_opt.dat", ' ', 0);
+    else
+        opt = importdata("data\CF"+(real_P_num - 8) +"_M_D2_opt.dat", ' ', 0);
+    end
+    if real_P_num >= 8
+        [opt(:, 1), opt(:,2)] = swap_value(opt(:, 1), opt(:, 2));
+    end
+    h(1) = plot3(opt(:,1), opt(:, 2), zeros(length(opt), 1) + opt_value(p_num - 28), 'khexagram', 'MarkerFaceColor', 'red', 'MarkerSize', 9);
+    legend(h,'全域最佳解','Location','northeast')
+    hold on;
+end
+%%
+function Draw3DPoints(p_num, run_num, one_gen, file_dir, fig)
+    WindowMaximized(fig)
+    opt_value = [200.0, 1.0, 1.0, 200.0, 1.031628453, 186.7309088, 1.0, 2709.093505 1.0, -2.0, 0,0,0,0,0,0,0,0,0,0];
+    np = 0 - one_gen - 1;
+    dot = importdata(file_dir+"\"+p_num+"R"+run_num+".csv", ',', 0);
+    archive_dot = importdata(file_dir+"\"+p_num+"R"+run_num+"Archive.csv", ',', 0);
+    h = zeros(2, 1);
+    h = Draw3DOptPoints(p_num, h);
+    real_P_num = GetRealFNum(p_num);
+
+    while np <= height(archive_dot)-one_gen + 1
+        dir = GetFigureDir(fig);
+        if(dir == "-")
+            np = np - one_gen;
+        elseif(dir == "~")
+        elseif dir ==  "s"
+            if exist('now_gen','var') == 1
+                delete(now_gen)
+            end
+            if exist("archive_now_gen", "var")
+                delete(archive_now_gen)
+            end
+            if exist('subpop_now_gen', 'var')
+                delete(subpop_now_gen)
+            end
+            hold off;
+            hold on;
+            break;
+        else
+            np = np + one_gen;
+        end
+        if(np < 1) 
+            np = 1;
+        elseif(np > height(dot)-one_gen + 1)
+            np = height(dot)-one_gen + 1;
+        end
+        disp(np)
+        if np >= 1
+            if exist('now_gen','var') == 1
+                delete(now_gen)
+            end
+            if exist("archive_now_gen", "var")
+                delete(archive_now_gen)
+            end
+            if exist('subpop_now_gen', 'var')
+                delete(subpop_now_gen)
+            end
+            %title("GEN:" + (np -1) / one_gen);
+            
+            
+            D1 = dot(np:np+one_gen - 1,1);
+            D2 = dot(np:np+one_gen - 1,2);
+            D3 = dot(np:np+one_gen - 1,3) * -1;
+            create_subpop = dot(np:np+one_gen - 1, 4);
+            AD1 = archive_dot(np:np+one_gen - 1,1);
+            AD2 = archive_dot(np:np+one_gen - 1,2);
+            AD3 = archive_dot(np:np+one_gen - 1,3);
+            AD3 = AD3;
+            if real_P_num >= 8
+                [D1, D2] = swap_value(D1, D2);
+                [AD1, AD2] = swap_value(AD1, AD2);
+            end
+            shading interp;
+            hold on;
+            now_gen = plot3(D1, D2, D3, 'ko', 'MarkerFaceColor', 'green');
+            h(2) = now_gen;
+            legend(h,'全域最佳解','主要族群解個體','Location','northeastoutside')
+            hold on;
+            %archive_now_gen = plot3(AD1, AD2, AD3*-1, 'ksquare', 'MarkerFaceColor', 'blue');
+            %h(2) = archive_now_gen;
+            %legend(h,'全域最佳解','潛力解族群解個體','Location','northeastoutside')
+            
+            hold on;
+            if(length(unique(create_subpop)) == 1)
+                if(create_subpop(1) ~= 0)
+                    if exist('centroid_now_gen', 'var')
+                        delete(centroid_now_gen)
+                    end
+                    if exist('subpop_now_gen', 'var')
+                        delete(subpop_now_gen)
+                    end
+                    disp(create_subpop(1));
+                    subpop_dot = importdata(file_dir+"\"+p_num+"R"+run_num+"subpop"+create_subpop(1)+".csv", ',');
+                    c_dot = importdata(file_dir+"\"+p_num+"R"+run_num+"centroid"+create_subpop(1)+".csv");
+                    subpop_dot = subpop_dot(subpop_dot(:,end) == 1,:);
+                    c_dot = c_dot(c_dot(:,end) == 1, :);
+                    subpop_D1 = subpop_dot(:,1);
+                    subpop_D2 = subpop_dot(:,2);
+                    subpop_D3 = subpop_dot(:,3);
+                    c_dot_D1 = c_dot(:, 1);
+                    c_dot_D2 = c_dot(:, 2);
+                    c_dot_D3 = zeros(height(c_dot_D1), 1) + opt_value(p_num - 28);
+                    if real_P_num >= 8
+                        [subpop_D1, subpop_D2] = swap_value(subpop_D1, subpop_D2);
+                        [c_dot_D1, c_dot_D2] = swap_value(c_dot_D1, c_dot_D2);
+                    end
+                    subpop_now_gen = plot3(subpop_D1, subpop_D2, subpop_D3*-1 - 30 , 'ko', 'MarkerFaceColor', '#FFFFFF');
+                    hold on;
+                    %centroid_now_gen = plot3(c_dot_D1, c_dot_D2, c_dot_D3 , 'ko', 'MarkerFaceColor', '#663399');
+                    hold on;
+                end
+            else
+                disp("EROOR!!!");
+            end
+            hold off;
+            exportgraphics(fig,'AnnotatedPlot.png', 'Resolution', '800')
+        end
+    end
+end
+%%
+
+function Draw3DSubpop(p_num, run_num, file_dir, fig, only_show_best)
+    WindowMaximized(fig)
+    opt_value = [200.0, 1.0, 1.0, 200.0, 1.031628453, 186.7309088, 1.0, 2709.093505 1.0, -2.0, 0,0,0,0,0,0,0,0,0,0];
+    total_number = size(dir(file_dir + "/"+p_num+"R"+run_num+"subpop*.csv"), 1);
+    h = zeros(2, 1);
+    h = Draw3DOptPoints(p_num, h);
+    real_P_num = GetRealFNum(p_num);
+    counter = 1;
+    accuracy_level = 0.00001;
+    while 1
+        direction = GetFigureDir(fig);
+        disp(direction);
+        if(direction == "-")
+            counter = counter - 1;
+        elseif(direction == "~")
+        elseif direction == "a"
+            only_show_best = ~only_show_best;
+        else
+            counter = counter + 1;
+        end
+        if(counter < 1) 
+            counter = 1;
+        elseif(counter > total_number)
+            counter = total_number;
+        end
+        %title(counter);
+        if(exist("now_gen", "var"))
+            delete(now_gen)
+        end
+        if exist("cnow_gen", "var")
+            delete(cnow_gen)
+        end
+        disp(file_dir+"\"+p_num+"R"+run_num+"subpop"+counter+".csv");
+        dot = importdata(file_dir+"\"+p_num+"R"+run_num+"subpop"+counter+".csv");
+        c_dot = importdata(file_dir+"\"+p_num+"R"+run_num+"centroid"+counter+".csv");
+        disp(dot)
+        % filter the individuals whose fitness under accuracy level
+        if only_show_best
+            dot = dot(dot(:,3)<= -opt_value(p_num - 28)+accuracy_level, :);
+        end
+        %disp(dot)
+
+        D1 = dot(:,1);
+        D2 = dot(:,2);
+        D3 = dot(:,3) * -1;
+        if only_show_best
+            D3 = D3 + 1;
+        end
+        %disp(c_dot);
+        CD1 = c_dot(:,1);
+        CD2 = c_dot(:,2);
+        CD3 = zeros(height(CD1), 1) + opt_value(p_num - 28);
+        if real_P_num >= 8
+            [D1, D2] = swap_value(D1, D2);
+            [CD1, CD2] = swap_value(CD1, CD2);
+        end
+        shading interp;
+        hold on;
+        now_gen = plot3(D1, D2, D3, 'kdiamond', 'MarkerFaceColor', 'black');
+        h(2) = now_gen;
+        legend(h,'全域最佳解','子族群個體','population','Location','northeastoutside')
+        hold on;
+        %cnow_gen = plot3(CD1, CD2, CD3, 'ko', 'MarkerFaceColor', 'red');
+        hold off;
+        exportgraphics(fig,'AnnotatedPlot.png', 'Resolution', '800')
+    end
+end

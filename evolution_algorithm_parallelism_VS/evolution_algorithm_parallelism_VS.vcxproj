@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1f6253f8-5f96-4a37-8ce6-b677eb50598e}</ProjectGuid>
+    <RootNamespace>evolutionalgorithmparallelismVS</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <Optimization>Disabled</Optimization>
+      <OpenMPSupport>true</OpenMPSupport>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="benchmark\inc\MMOP\cec2013.cpp" />
+    <ClCompile Include="benchmark\inc\MMOP\cfunction.cpp" />
+    <ClCompile Include="benchmark\inc\MMOP\rand2.c" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F1.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F2.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F3.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F4.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F5.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F6.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F7.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F8.cpp" />
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F9.cpp" />
+    <ClCompile Include="benchmark\src\Benchmarks.cpp" />
+    <ClCompile Include="benchmark\src\CEC\F1.cpp" />
+    <ClCompile Include="benchmark\src\CEC_2013\cec2013benchmarks.cpp" />
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f12.cpp" />
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f15.cpp" />
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f16.cpp" />
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f3.cpp" />
+    <ClCompile Include="evolution_algorithm_parallelism_VS.cpp" />
+    <ClCompile Include="sources\cell.cpp" />
+    <ClCompile Include="sources\cells.cpp" />
+    <ClCompile Include="sources\differential_evolution\behavior.cpp" />
+    <ClCompile Include="sources\differential_evolution\evolve.cpp" />
+    <ClCompile Include="sources\differential_evolution\localvarialbes.cpp" />
+    <ClCompile Include="sources\differential_evolution\process_controller.cpp" />
+    <ClCompile Include="sources\differential_evolution\memorize.cpp" />
+    <ClCompile Include="sources\differential_evolution\parameter_control.cpp" />
+    <ClCompile Include="sources\differential_evolution\sample.cpp" />
+    <ClCompile Include="sources\differential_evolution\select.cpp" />
+    <ClCompile Include="sources\differential_evolution\variants\basic.cpp" />
+    <ClCompile Include="sources\differential_evolution\variants\de.cpp" />
+    <ClCompile Include="sources\differential_evolution\variants\paehn.cpp" />
+    <ClCompile Include="sources\differential_evolution\variants\random.cpp" />
+    <ClCompile Include="sources\differential_evolution\variants\sade.cpp" />
+    <ClCompile Include="sources\differential_evolution\variants\shade.cpp" />
+    <ClCompile Include="sources\executevariables.cpp" />
+    <ClCompile Include="sources\individual.cpp" />
+    <ClCompile Include="sources\population.cpp" />
+    <ClCompile Include="sources\publicfunction.cpp" />
+    <ClCompile Include="sources\readconfig.cpp" />
+    <ClCompile Include="sources\differential_evolution\strategies.cpp" />
+    <ClCompile Include="sources\subpopulation.cpp" />
+    <ClCompile Include="sources\variables.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F1.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F2.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F3.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F4.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F5.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F6.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F7.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F8.h" />
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F9.h" />
+    <ClInclude Include="benchmark\inc\Benchmarks.h" />
+    <ClInclude Include="benchmark\inc\CEC\F1.h" />
+    <ClInclude Include="benchmark\inc\CEC_2013\cec2013benchmarks.h" />
+    <ClInclude Include="benchmark\inc\MMOP\cec2013.h" />
+    <ClInclude Include="benchmark\inc\MMOP\cfunction.h" />
+    <ClInclude Include="benchmark\inc\MMOP\rand2.h" />
+    <ClInclude Include="benchmark\inc\MMOP\sortidx.h" />
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f12.h" />
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f15.h" />
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f16.h" />
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f3.h" />
+    <ClInclude Include="headers\cells.h" />
+    <ClInclude Include="headers\corematerial.h" />
+    <ClInclude Include="headers\differential_evolution\behavior.h" />
+    <ClInclude Include="headers\cell.h" />
+    <ClInclude Include="headers\differential_evolution\localvariables.h" />
+    <ClInclude Include="headers\differential_evolution\memorize.h" />
+    <ClInclude Include="headers\differential_evolution\parameter_control.h" />
+    <ClInclude Include="headers\differential_evolution\process_controller.h" />
+    <ClInclude Include="headers\differential_evolution\sample.h" />
+    <ClInclude Include="headers\differential_evolution\select.h" />
+    <ClInclude Include="headers\differential_evolution\variants\basic.h" />
+    <ClInclude Include="headers\differential_evolution\variants\de.h" />
+    <ClInclude Include="headers\differential_evolution\variants\paehn.h" />
+    <ClInclude Include="headers\differential_evolution\variants\random.h" />
+    <ClInclude Include="headers\differential_evolution\variants\sade.h" />
+    <ClInclude Include="headers\differential_evolution\variants\shade.h" />
+    <ClInclude Include="headers\executivevariables.h" />
+    <ClInclude Include="headers\header.h" />
+    <ClInclude Include="headers\individual.h" />
+    <ClInclude Include="headers\population.h" />
+    <ClInclude Include="headers\publicfunction.h" />
+    <ClInclude Include="headers\readconfig.h" />
+    <ClInclude Include="headers\differential_evolution\strategies.h" />
+    <ClInclude Include="headers\subpopulation.h" />
+    <ClInclude Include="headers\variables.h" />
+    <ClInclude Include="headers\differential_evolution\evolve.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,113 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//																								//
+//										COMMON RULES											//
+//																								//
+// [debug], [algorithm] and so on, are called section.											//
+//																								//
+// Common rule here, but can be ignored if it is in conflict with section rule. 				//
+// It has different default settings when choosing algorithm in section [algorithm].			//
+// If you don't want them to be execute, you MUST set them to false. Do NOT comment or delete   //
+// them.																						//
+//																								//
+// Almost section only can set true or false, but section [parameters].							//
+//																								//
+// Only accept "//" as comment. 																//
+//																								//
+// ORDER IS IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!													//
+// Settings can be influenced if they are changing same settings.								//
+// It will happen in same section. For example, if both kRandom and kLHD in [population] are set//
+// to true, only the last one will work. Because last setting will override others.				//
+// Influence also can be implicit, such as [algorithm] will change behaviors which are set in	//
+// [population], even their settings didn't have same name, and vice versa.						//
+//																								//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+//
+// Set which information should be print during runtime.
+// The lines before "kReadConfig" is setting to true won't be print.
+// all settings in section [debug] are false as default
+//
+[debug]
+kReadConfig = [true]
+kInitialPopulation = [false]
+kInitialFitness = [false]
+kMutantAndCrossover = [false]
+kSelection = [false]
+
+[algorithm]
+kCustom = [true]
+
+
+[population]
+kRandom = [true]
+
+
+[subpopulation]
+kPAEHN_Subpopulation = [true]
+
+[mutant and crossover]
+kCurToPBest = [true]
+
+[parameters control]
+kCR = [true]
+kF = [true]
+
+
+[memory]
+kNPRank = [true]
+kArchive = [true]
+
+[archive]
+kPAEHN_Archive = [true]
+
+[memory CR]
+kPAEHN_SHADE_CR = [true]
+
+[memory F]
+kPAEHN_SHADE_F = [true]
+
+[parameters control method]
+kRandomP = [true]
+kMemoryCR = [true]
+kMemoryF = [true]
+
+[out bound handler]
+kRerandomDimension = [false]
+kBackToBound = [true]
+kHalfBoundDistance = [false]
+kRerandomIndividual = [false]
+
+[selection]
+kCompetition = [true]
+
+[PAEHN]
+// set to false for PAEHN-1
+kPAEHN_RecurrsiveClearing = [false]
+// set to true for PAEHN-2
+kPAEHN_RandomNewPopulation = [false]
+// set to true for PAEHN-3
+kPAEHN_RandomPromisingArchive = [false]
+// set to false for PAEHN-4
+kPAEHN_ReinitializingCrowdingPromisingArchive = [true]
+
+[stop criterion]
+kMaxFE = [true]
+
+[parameters]
+de_CR_ = [0.5]
+de_F_ = [0.5]
+de_np_ = [100]
+de_next_gen_np_ = [100]
+archive_size_ = [100]
+run_ = [51]
+problem_amount_ = [49]
+// decide which problems are going to be execute. Default set to 0(false).
+// 1 to 28 are Benchmark Functions for the CEC’2013 Special Session and Competition on Large-Scale Global Optimization
+// 29 to 48 are Bemcmarks for the MMOP problems of CEC'2013
+// MMOP 2D Functions:
+// problem_set_ = [[0:48] = 0, [29:48]=1]
+problem_set_ = [[0:48] = 0, [41:41]=1]
+// PAEHN
+paehn_H_ = [4]
+paehn_subpopulation_size_ = [4]
+paehn_stagnation_upper_ = [7]

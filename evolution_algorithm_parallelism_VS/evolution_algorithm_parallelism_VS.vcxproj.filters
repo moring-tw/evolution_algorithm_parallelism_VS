@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="來源檔案">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="來源檔案\test">
+      <UniqueIdentifier>{b5fb9c65-cd3f-4d27-888d-e515fb2327b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="evolution_algorithm_parallelism_VS.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\readconfig.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\publicfunction.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\variables.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\executevariables.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\population.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\individual.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F1.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F2.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F3.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F4.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F5.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F6.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F7.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F8.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\1999\benchmark_1999_F9.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\CEC\F1.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\CEC_2013\cec2013benchmarks.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f3.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f12.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f15.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\SADE_2009\benchmark_2009_sade_f16.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\src\Benchmarks.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\strategies.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\memorize.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\parameter_control.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\variants\shade.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\variants\sade.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\process_controller.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\variants\de.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\localvarialbes.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\evolve.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\behavior.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\variants\basic.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\select.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\variants\random.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\variants\paehn.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\differential_evolution\sample.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\cells.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\cell.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\subpopulation.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\inc\MMOP\cec2013.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\inc\MMOP\cfunction.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmark\inc\MMOP\rand2.c">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\readconfig.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\corematerial.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\publicfunction.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\variables.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\executivevariables.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\population.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\individual.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F1.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F2.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F3.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F4.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F5.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F6.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F7.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F8.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\1999\benchmark_1999_F9.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\CEC\F1.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\CEC_2013\cec2013benchmarks.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f3.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f12.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f15.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\SADE_2009\benchmark_2009_sade_f16.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\Benchmarks.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\header.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\strategies.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\memorize.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\parameter_control.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\variants\shade.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\variants\sade.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\variants\de.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\process_controller.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\localvariables.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\behavior.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\variants\basic.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\select.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\variants\random.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\variants\paehn.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\sample.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\differential_evolution\evolve.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\cell.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\cells.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\subpopulation.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\MMOP\cec2013.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\MMOP\cfunction.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\MMOP\rand2.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="benchmark\inc\MMOP\sortidx.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
